@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Super Mall</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Super Mall</h1>
+  <p>Shop Everything. Anywhere. Anytime.</p>
+  <button class="cart-btn" onclick="toggleCart()">🛒 Cart (<span id="cart-count">0</span>)</button>
+</header>
+
+<section class="categories">
+  <button class="active" onclick="filterProducts('all', this)">All</button>
+  <button onclick="filterProducts('electronics', this)">Electronics</button>
+  <button onclick="filterProducts('fashion', this)">Fashion</button>
+  <button onclick="filterProducts('groceries', this)">Groceries</button>
+</section>
+
+<section class="products">
+
+<!-- ELECTRONICS -->
+<div class="product electronics"><h3>Smartphone</h3><p>₹15000</p><button onclick="addToCart('Smartphone',15000)">Add</button></div>
+<div class="product electronics"><h3>Laptop</h3><p>₹55000</p><button onclick="addToCart('Laptop',55000)">Add</button></div>
+<div class="product electronics"><h3>Headphones</h3><p>₹2000</p><button onclick="addToCart('Headphones',2000)">Add</button></div>
+<div class="product electronics"><h3>Smartwatch</h3><p>₹4000</p><button onclick="addToCart('Smartwatch',4000)">Add</button></div>
+<div class="product electronics"><h3>Bluetooth Speaker</h3><p>₹3000</p><button onclick="addToCart('Speaker',3000)">Add</button></div>
+<div class="product electronics"><h3>Tablet</h3><p>₹18000</p><button onclick="addToCart('Tablet',18000)">Add</button></div>
+
+<!-- FASHION -->
+<div class="product fashion"><h3>T-Shirt</h3><p>₹499</p><button onclick="addToCart('T-Shirt',499)">Add</button></div>
+<div class="product fashion"><h3>Jeans</h3><p>₹1299</p><button onclick="addToCart('Jeans',1299)">Add</button></div>
+<div class="product fashion"><h3>Shoes</h3><p>₹2499</p><button onclick="addToCart('Shoes',2499)">Add</button></div>
+<div class="product fashion"><h3>Jacket</h3><p>₹2999</p><button onclick="addToCart('Jacket',2999)">Add</button></div>
+<div class="product fashion"><h3>Dress</h3><p>₹1999</p><button onclick="addToCart('Dress',1999)">Add</button></div>
+<div class="product fashion"><h3>Cap</h3><p>₹399</p><button onclick="addToCart('Cap',399)">Add</button></div>
+
+<!-- GROCERIES -->
+<div class="product groceries"><h3>Rice (5kg)</h3><p>₹350</p><button onclick="addToCart('Rice',350)">Add</button></div>
+<div class="product groceries"><h3>Cooking Oil</h3><p>₹220</p><button onclick="addToCart('Oil',220)">Add</button></div>
+<div class="product groceries"><h3>Milk Pack</h3><p>₹60</p><button onclick="addToCart('Milk',60)">Add</button></div>
+<div class="product groceries"><h3>Sugar (1kg)</h3><p>₹45</p><button onclick="addToCart('Sugar',45)">Add</button></div>
+<div class="product groceries"><h3>Wheat Flour</h3><p>₹280</p><button onclick="addToCart('Flour',280)">Add</button></div>
+<div class="product groceries"><h3>Tea Powder</h3><p>₹180</p><button onclick="addToCart('Tea',180)">Add</button></div>
+
+</section>
+
+<!-- CART -->
+<div class="cart" id="cart">
+  <h2>Your Cart</h2>
+  <ul id="cart-items"></ul>
+  <h3>Total: ₹<span id="total">0</span></h3>
+  <button class="checkout" onclick="checkout()">Checkout</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
